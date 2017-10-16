@@ -78,8 +78,8 @@ c::set('plugin.updateid', array(
     'pages'  => 'home',
     'fields' => 'featured_works'
   ),
-  // You can add other pages and use arrays
-  // to specify multiple pages & multiple fields to update
+  // You can add other pages
+  // And use arrays to specify multiple pages & multiple fields to update
   array(
     'pages'  => ['about', 'contact'],
     'fields' => ['emails', 'authors']
