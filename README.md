@@ -32,7 +32,7 @@ Simply use the built-in **Kirby Package Manager** by running:
 $ npm run kirby:add
 $ [?] Git URL: https://github.com/brocessing/kirby-updateid
 $ [?] Module name: updateid
-$ [?] Category: plugin
+$ [?] Category: plugins
 ```
 
 ### 2. Kirby CLI
