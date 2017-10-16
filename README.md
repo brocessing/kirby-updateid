@@ -52,7 +52,7 @@ $ kirby plugin:install brocessing/kirby-updateid
 **Make sure that the plugin folder structure looks like this:**
 
 ```text
-site/kirby/updateid/
+site/plugins/updateid/
 ```
 
 ### 4. Git Submodule
