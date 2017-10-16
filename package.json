@@ -1,0 +1,12 @@
+{
+  "name": "updateid",
+  "description": "Kirby plugin to automatically update references to a page id",
+  "author": "Brocessing <https://github.com/brocessing>",
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/brocessing/kirby-previewfiles"
+  },
+  "version": "0.1.0",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
