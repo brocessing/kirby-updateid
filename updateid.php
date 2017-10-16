@@ -5,11 +5,11 @@ kirby()->hook('panel.page.move', function($page, $oldPage) {
   if (!is_array($config)) return;
 
   $oldId = $oldPage->id();
+  $regex = '/([^a-z0-9-]|^)' . preg_quote($oldId, '/') . '([^a-z0-9-]|$)/m';
   $newId = $page->id();
   if ($oldId === $newId) return;
 
   foreach($config as $e) {
-
     if (
       !is_array($e) ||
       !isset($e['fields']) ||
@@ -43,8 +43,16 @@ kirby()->hook('panel.page.move', function($page, $oldPage) {
           $fieldValue = $isMultilang
             ? $target->content($lang)->{$fieldName}()->value()
             : $target->{$fieldName}()->value();
-          if (strpos($fieldValue, $oldId) === false) continue;
-          $data[$fieldName] = str_replace($oldId, $newId, $fieldValue);
+          if (!preg_match_all($regex, $fieldValue)) continue;
+          $data[$fieldName] = preg_replace($regex, "$1".$newId."$2", $fieldValue);
+          // Used for debug
+          // $message = "\n" . 'Update:';
+          // $message .= "\n" . '    Page: ' . $target->id();
+          // $message .= "\n" . '    Field: ' . $fieldName;
+          // $message .= "\n" . '    Lang: ' . $lang;
+          // $message .= "\n" . '    From: ' . $fieldValue;
+          // $message .= "\n" . '    To: ' . $data[$fieldName];
+          // error_log(var_export($message, true));
         }
         if (count($data) > 0) {
           if ($isMultilang) $target->update($data, $lang);

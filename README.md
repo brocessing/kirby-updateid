@@ -2,7 +2,7 @@
 <h3 align="center">Automatically update references to a page id</h3>
 
 <div align="center">
-    <img alt="version" src="https://img.shields.io/badge/version-0.1.0-green.svg?style=flat-square"/>
+    <img alt="version" src="https://img.shields.io/badge/version-0.1.1-green.svg?style=flat-square"/>
     <img alt="kirby_version" src="https://img.shields.io/badge/kirby-2.3+-red.svg?style=flat-square"/>
     <img alt="license" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"/>
     <br>
