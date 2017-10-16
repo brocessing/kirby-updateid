@@ -16,7 +16,7 @@
 
 - Sometimes you need to reference pages to each other, usually by the page ID
 - When you update a page URI, the ID can change and references to this page from other page/fields can be lost.
-- This plugin automatically updates selected fields when their referenced ID change.
+- This plugin automatically updates selected fields when a referenced ID change.
 
 <br>
 
